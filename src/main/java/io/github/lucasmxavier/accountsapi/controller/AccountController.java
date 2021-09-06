@@ -2,6 +2,7 @@ package io.github.lucasmxavier.accountsapi.controller;
 
 import io.github.lucasmxavier.accountsapi.model.Account;
 import io.github.lucasmxavier.accountsapi.service.AccountService;
+import lombok.val;
 import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -49,7 +50,7 @@ public class AccountController {
             if(accountService.isJSONValid(account.toString())) {
                 Account accountCreated = accountService.create(account);
 
-                var uri = ServletUriComponentsBuilder.fromCurrentRequest()
+                val uri = ServletUriComponentsBuilder.fromCurrentRequest()
                         .path(accountCreated.getNumber()).build().toUri();
 
                 accountService.add(accountCreated);
