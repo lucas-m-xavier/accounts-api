@@ -8,9 +8,6 @@
         <version>2.5.4</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <properties>
-        <java.version>11</java.version>
-    </properties>
     <groupId>io.github.lucas-m-xavier</groupId>
     <artifactId>accounts-api</artifactId>
     <version>0.0.1-SNAPSHOT</version>
