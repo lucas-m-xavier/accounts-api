@@ -10,8 +10,8 @@ public class AccountFactoryImpl implements AccountFactory {
     public Account createAccount(String type) {
         if (AccountType.CONTA_CORRENTE.getValue().equals(type)) {
             return new Account(AccountType.CONTA_CORRENTE);
-        } else if (AccountType.CONTA_POUPANÇA.getValue().equals(type)) {
-            return new Account(AccountType.CONTA_POUPANÇA);
+        } else if (AccountType.CONTA_POUPANCA.getValue().equals(type)) {
+            return new Account(AccountType.CONTA_POUPANCA);
         }
 
         return new Account(AccountType.RETURN);

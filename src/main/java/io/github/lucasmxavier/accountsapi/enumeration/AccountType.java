@@ -2,7 +2,7 @@ package io.github.lucasmxavier.accountsapi.enumeration;
 
 public enum AccountType {
 
-    CONTA_CORRENTE("CONTA-CORRENTE"), CONTA_POUPANÇA("CONTA-POUPANÇA"), RETURN("RETURN");
+    CONTA_CORRENTE("CONTA-CORRENTE"), CONTA_POUPANCA("CONTA-POUPANÇA"), RETURN("RETURN");
 
     private String value;
 
