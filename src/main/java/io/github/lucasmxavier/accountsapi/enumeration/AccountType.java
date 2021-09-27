@@ -10,14 +10,14 @@ public enum AccountType {
         this.value = value;
     }
 
-    public static AccountType getEnum(String value) {
+    public static AccountType getEnum(String value) throws Exception {
         for(AccountType t : values()) {
             if(value.equals(t.getValue())) {
                 return t;
             }
         }
 
-        throw new RuntimeException("Type not found.");
+        throw new Exception("Type not found.");
     }
 
     public String getValue() {

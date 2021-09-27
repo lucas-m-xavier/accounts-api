@@ -48,7 +48,7 @@ public class AccountService {
         return new BigDecimal((String) account.get("amount"));
     }
 
-    private void setAccountValues(JSONObject jsonAccount, Account account) {
+    private void setAccountValues(JSONObject jsonAccount, Account account) throws Exception {
         String type = (String) jsonAccount.get("type");
         String number = (String) jsonAccount.get("number");
         String clientName = (String) jsonAccount.get("clientName");
@@ -61,7 +61,7 @@ public class AccountService {
         account.setType(type != null ? AccountType.getEnum(type) : account.getType());
     }
 
-    public Account create(JSONObject jsonAccount) {
+    public Account create(JSONObject jsonAccount) throws Exception {
 
         createFactory();
 
@@ -72,7 +72,7 @@ public class AccountService {
         return account;
     }
 
-    public Account update(Account account, JSONObject jsonAccount) {
+    public Account update(Account account, JSONObject jsonAccount) throws Exception {
 
         setAccountValues(jsonAccount, account);
         return account;
